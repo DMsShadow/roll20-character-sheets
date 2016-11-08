@@ -116,9 +116,9 @@ repeating_flaws
     
     // Function to calculate Toughness, called when changes made to Armor, Shield, Fortitude, or toughness other
     function calcToughness() {
-        getAttrs(["fortitude_score", "armor", "shield", "toughness_other"], function(values) {
+        getAttrs(["fortitude_score", "presence_score", "toughness_other"], function(values) {
             setAttrs({
-                "toughness": values.fortitude_score*1 + values.armor*1 + values.shield*1 + values.toughness_other*1 + 10
+                "toughness": values.fortitude_score*1 + values.presence_score*1 + values.toughness_other*1 + 10
             });
         });
     };
